@@ -27,3 +27,5 @@ My uclinux study
 
 ## STM32F429I-DISC1 factory rom  
 * factory_0x08000000.bin  
+
+## 飞凌, ok1052c  
