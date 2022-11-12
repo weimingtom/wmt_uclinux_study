@@ -3,7 +3,6 @@ My uclinux study
 
 ## (Built, Tested) STM32F429I-DISC1 uclinux    
 * http://github.com/jserv/stm32f429-linux-builder  
-* search baidupan, stm32f429-linux-builder-master_ubuntu_140432_20221109_uclinux_stm32.tar.gz  
 * https://www.freesion.com/article/7452512540/  
 * search baidupan, uclinux_test_ok_0x08000000_size_0x200000.bin  
 * search baidupan, stm32f429-linux-builder-master_ubuntu_140432_20221109_uclinux_stm32.tar.gz  
