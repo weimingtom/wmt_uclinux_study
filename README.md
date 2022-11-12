@@ -15,3 +15,6 @@ My uclinux study
 ## (Not built, Tested) DZ51's S3C44B0X uclinux  
 * search baidupan, ARM 44BOX.iso  
 * search baidupan, DZ51_ARM使用手册.pdf  
+
+## uc-PC 序言  
+* https://hhuysqt.github.io/ucpc0/  
