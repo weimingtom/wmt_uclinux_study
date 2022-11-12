@@ -21,6 +21,8 @@ My uclinux study
 * https://hhuysqt.github.io/ucpc0/  
 
 ## (Built, Tested) STM32F429I-disco_Buildroot  
+* https://github.com/fdu/STM32F429I-disco_Buildroot  
+* https://elinux.org/STM32#STM32F429i-Discovery  
 * https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1  
 * search baidupan, stm32f429i_disc1_buildroot_step2_after_burn.bin  
 * search baidupan, STM32F429I-disco_Buildroot_v3_success_step2.tar.gz  
