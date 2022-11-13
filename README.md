@@ -41,3 +41,12 @@ My uclinux study
 
 ## 飞凌, ok1052c  
 
+## emcraft MIMXRT1050-EVK uclinux    
+* RT1050(地上最强Cortex-M7) uclinux初体验  
+* https://blog.csdn.net/u010444107/article/details/78548358  
+* https://emcraft.com/products/819#demo  
+
+## (TODO) emcraft, stm32f429ig上的ucLinux修改外部晶振频率  
+* https://blog.csdn.net/tianyake_1/article/details/84633562  
+* 将stm32f429i-discovery开发板的 emcraft uclinux 例程移植到秉火stm32f429的开发板上，由于stm32f429i-discovery上使用的是8MHZ外部晶振，而秉火stm32f429的开发板使用的是25MHZ的晶振。  
+* search baidupan, stm32f429i-discovery uclinux BSP  
