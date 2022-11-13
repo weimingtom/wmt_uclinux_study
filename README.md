@@ -15,6 +15,11 @@ My uclinux study
 * https://www.freesion.com/article/7452512540/  
 * search baidupan, uclinux_test_ok_0x08000000_size_0x200000.bin  
 * search baidupan, stm32f429-linux-builder-master_ubuntu_140432_20221109_uclinux_stm32.tar.gz  
+* uart: 115200-8-1-none-none  
+stm32<->uart converter  
+GND<->GND(black)  
+PC11<->TXD(orage)  
+PC10<->RXD(yellow)  
 
 ## STM3210E-EVAL uclinux  
 * https://www.st.com/content/st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32-standard-peripheral-library-expansion/stsw-stm32024.html  
@@ -35,6 +40,7 @@ My uclinux study
 * https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1  
 * search baidupan, stm32f429i_disc1_buildroot_step2_after_burn.bin  
 * search baidupan, STM32F429I-disco_Buildroot_v3_success_step2.tar.gz  
+* uart: 控制台串口在COM34，板载st-link的虚拟串口, 115200-8-1-none-none  
 
 ## STM32F429I-DISC1 factory rom  
 * factory_0x08000000.bin  
