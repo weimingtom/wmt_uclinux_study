@@ -18,7 +18,7 @@ My uclinux study
 * uart: 115200-8-1-none-none  
 stm32<->uart converter  
 GND<->GND(black)  
-PC11<->TXD(orage)  
+PC11<->TXD(orange)  
 PC10<->RXD(yellow)  
 
 ## STM3210E-EVAL uclinux  
