@@ -31,3 +31,7 @@ My uclinux study
 * factory_0x08000000.bin  
 
 ## 飞凌, ok1052c  
+
+## elinux's linux and cpio rootfs  
+* STM32F469I-DISCO移植Linux4.13.12  
+* https://www.likecs.com/show-205025138.html  
