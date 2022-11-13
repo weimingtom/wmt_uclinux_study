@@ -1,6 +1,15 @@
 # wmt_uclinux_study
 My uclinux study
 
+## (TODO) elinux's linux and cpio rootfs  
+* STM32F469I-DISCO移植Linux4.13.12  
+* https://www.likecs.com/show-205025138.html  
+* https://github.com/mcoquelin-stm32/afboot-stm32  
+* 下载引导程序afboot-stm32-master.zip  
+* https://www.kernel.org/  
+* 下载最新的Linux内核linux-4.13.12.tar.xz  
+* https://elinux.org/File:Stm32_mini_rootfs.cpio.bz2   
+
 ## (Built, Tested) STM32F429I-DISC1 uclinux    
 * http://github.com/jserv/stm32f429-linux-builder  
 * https://www.freesion.com/article/7452512540/  
@@ -31,13 +40,4 @@ My uclinux study
 * factory_0x08000000.bin  
 
 ## 飞凌, ok1052c  
-
-## elinux's linux and cpio rootfs  
-* STM32F469I-DISCO移植Linux4.13.12  
-* https://www.likecs.com/show-205025138.html  
-* https://github.com/mcoquelin-stm32/afboot-stm32  
-* 下载引导程序afboot-stm32-master.zip  
-* https://www.kernel.org/  
-* 下载最新的Linux内核linux-4.13.12.tar.xz  
-* https://elinux.org/File:Stm32_mini_rootfs.cpio.bz2   
 
