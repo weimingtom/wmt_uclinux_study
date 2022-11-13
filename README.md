@@ -35,3 +35,9 @@ My uclinux study
 ## elinux's linux and cpio rootfs  
 * STM32F469I-DISCO移植Linux4.13.12  
 * https://www.likecs.com/show-205025138.html  
+* https://github.com/mcoquelin-stm32/afboot-stm32  
+* 下载引导程序afboot-stm32-master.zip  
+* https://www.kernel.org/  
+* 下载最新的Linux内核linux-4.13.12.tar.xz  
+* https://elinux.org/File:Stm32_mini_rootfs.cpio.bz2   
+
