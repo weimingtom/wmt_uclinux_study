@@ -56,3 +56,7 @@ PC10<->RXD(yellow)
 * https://blog.csdn.net/tianyake_1/article/details/84633562  
 * 将stm32f429i-discovery开发板的 emcraft uclinux 例程移植到秉火stm32f429的开发板上，由于stm32f429i-discovery上使用的是8MHZ外部晶振，而秉火stm32f429的开发板使用的是25MHZ的晶振。  
 * search baidupan, stm32f429i-discovery uclinux BSP  
+
+## k210-linux-nommu  
+* https://github.com/vowstar/k210-linux-nommu  
+* https://www.cnx-software.com/2020/02/17/how-to-build-run-linux-on-kendryte-k210-risc-v-nommu-processor/  
