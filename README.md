@@ -21,7 +21,7 @@ GND<->GND(black)
 PC11<->TXD(orange)  
 PC10<->RXD(yellow)  
 * gcc: arm-2010q1-189-arm-uclinuxeabi-i686-pc-linux-gnu.tar.bz2  
-* buildroot: busybox-1.22.1.tar.bz2  
+* busybox: busybox-1.22.1.tar.bz2  
 
 ## STM3210E-EVAL uclinux  
 * https://www.st.com/content/st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32-standard-peripheral-library-expansion/stsw-stm32024.html  
@@ -36,13 +36,16 @@ PC10<->RXD(yellow)
 ## uc-PC 序言  
 * https://hhuysqt.github.io/ucpc0/  
 
-## (Built, Tested) STM32F429I-disco_Buildroot  
+## (Built, Tested) STM32F429I-disco_Buildroot, need mod linux and busybox source see issues    
 * https://github.com/fdu/STM32F429I-disco_Buildroot  
 * https://elinux.org/STM32#STM32F429i-Discovery  
 * https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1  
 * search baidupan, stm32f429i_disc1_buildroot_step2_after_burn.bin  
 * search baidupan, STM32F429I-disco_Buildroot_v3_success_step2.tar.gz  
 * uart: 控制台串口在COM34，板载st-link的虚拟串口, 115200-8-1-none-none  
+* busybox: 1.27.2  
+* linux: 4.15.7  
+* buildroot: 2018.02  
 
 ## STM32F429I-DISC1 factory rom  
 * factory_0x08000000.bin  
