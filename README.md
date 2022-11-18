@@ -20,6 +20,8 @@ stm32<->uart converter
 GND<->GND(black)  
 PC11<->TXD(orange)  
 PC10<->RXD(yellow)  
+* gcc: arm-2010q1-189-arm-uclinuxeabi-i686-pc-linux-gnu.tar.bz2  
+* buildroot: busybox-1.22.1.tar.bz2  
 
 ## STM3210E-EVAL uclinux  
 * https://www.st.com/content/st_com/en/products/embedded-software/mcu-mpu-embedded-software/stm32-embedded-software/stm32-standard-peripheral-library-expansion/stsw-stm32024.html  
