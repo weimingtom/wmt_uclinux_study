@@ -10,6 +10,51 @@ My uclinux study
 * 下载最新的Linux内核linux-4.13.12.tar.xz  
 * https://elinux.org/File:Stm32_mini_rootfs.cpio.bz2   
 
+## (Built, Tested) uclinux skyeye build  
+* uclinux_04_skyeye_1.2.5_build_output.tar.gz  
+* uclinux的预编译工具链有什么问题呢？它所提供的是一种sh安装包，  
+但ubuntu不支持（可能只支持redhat），这个预编译工具链arm-elf-gcc，  
+不可以像现在的交叉工具链那样绿色安装，只能安装在指定位置，/usr/local，  
+其实就是类似于编译安装（因为编译安装也是固定输出路径），所以这产生两个问题，  
+一个是怎么自己编译，二是怎么替换成现在的arm交叉工具链（现在的可以随意复制目录）  
+* 我试过好像可以成功在ubuntu 14下编译uclinux 04旧版本，使用预编译的arm工具链，    
+并且在skyeye模拟器下运行。有时间我把输出的命令行内容展示出来。不过这里还有很多复杂的问题，  
+例如怎么编译工具链，怎么替换工具链，怎么组合不同的linux版本和libc版本。  
+uclinux的旧版本和预编译工具链我是花了很长时间收集的（来源于存档和一些旧书的光盘），  
+编译方法和运行方法也需要查阅很多资料，uclinux似乎不提供相关的文档  
+* gcc: arm-elf-compiler.tar.gz, from 嵌入式系统开发实验与实践_实验与实践.iso  
+* uclinux: uClinux-dist-20041215.tar.gz  
+* build:  
+ubuntu 140432  
+$ sudo tar xzf arm-elf-compiler.tar.gz -C /usr/local/  
+$ rm -rf /usr/local/include  
+(test ar) $ arm-elf-ar  
+tar xzf uClinux-dist-20041215.tar.gz  
+cd uClinux-dist  
+make xconfig # choose gdb/skyeye and linux-2.4  
+make dep  
+make  
+sudo apt install skyeye  
+skyeye -h  
+SkyEye 1.2.5  
+copy file skyeye.conf  
+skyeye -e linux-2.4.x/linux  
+```
+# skyeye -e linux-2.4.x/linux
+
+cpu:arm7tdmi
+mach:at91
+mem_bank:map=M, type=RW, addr=0x00000000, size=0x00004000
+mem_bank:map=M, type=RW, addr=0x01000000, size=0x00400000
+mem_bank:map=M, type=R, addr=0x01400000 , size=0x00400000, file=images/romfs.img
+mem_bank:map=M, type=RW, addr=0x02000000, size=0x00400000
+mem_bank:map=M, type=RW, addr=0x02400000, size=0x00008000
+mem_bank:map=M, type=RW, addr=0x04000000, size=0x00400000
+mem_bank:map=I, type=RW, addr=0xf0000000, size=0x10000000
+```
+* ref: uClinux-dist-20040408 skyeye 仿真  
+https://zhuanlan.zhihu.com/p/27045296  
+
 ## (Built, Tested) STM32F429I-DISC1 uclinux    
 * http://github.com/jserv/stm32f429-linux-builder  
 * https://www.freesion.com/article/7452512540/  
