@@ -10,6 +10,9 @@ My uclinux study
 * 下载最新的Linux内核linux-4.13.12.tar.xz  
 * https://elinux.org/File:Stm32_mini_rootfs.cpio.bz2   
 
+## (TODO) Aboriginal Linux  
+http://landley.net/aboriginal/screenshots/  
+
 ## (Built, Tested) uclinux skyeye build  
 * uclinux_04_skyeye_1.2.5_build_output.tar.gz  
 * uclinux的预编译工具链有什么问题呢？它所提供的是一种sh安装包，  
