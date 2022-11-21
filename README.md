@@ -90,7 +90,7 @@ PC10<->RXD(yellow)
 * https://github.com/fdu/STM32F429I-disco_Buildroot/issues/1  
 * search baidupan, stm32f429i_disc1_buildroot_step2_after_burn.bin  
 * search baidupan, STM32F429I-disco_Buildroot_v3_success_step2.tar.gz  
-* uart: 控制台串口在COM34，板载st-link的虚拟串口, 115200-8-1-none-none  
+* uart: 控制台串口在COM34，板载st-link的虚拟串口, 115200-8-1-none-none (aka. STM32F429 USART1, PA9-TX, PA10-RX)    
 * busybox: 1.27.2  
 * linux: 4.15.7  
 * buildroot: 2018.02  
