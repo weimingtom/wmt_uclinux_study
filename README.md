@@ -99,7 +99,7 @@ PC10<->RXD(yellow)
 ## STM32F429I-DISC1 factory rom  
 * factory_0x08000000.bin  
 
-## 飞凌, ok1052c  
+## (NOT GOOD) 飞凌, ok1052c, u-boot and kernel are closed source     
 
 ## emcraft MIMXRT1050-EVK uclinux    
 * RT1050(地上最强Cortex-M7) uclinux初体验  
