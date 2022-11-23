@@ -27,18 +27,18 @@ exec 1>/dev/console
 exec 2>/dev/console
 exec /sbin/init $*
 ```
-* build  
-```
-export PATH=~/uclinux/stm32/gcc-arm-none-eabi-4_9-2014q4/bin:$PATH
-make ARCH=arm CROSS_COMPILE=arm-none-eabi- stm32_defconfig
-make ARCH=arm CROSS_COMPILE=arm-none-eabi-
-```
 * .config  
 ```
 CONFIG_INITRAMFS_SOURCE="/home/wmt/work_uc5/Stm32_mini_rootfs"
 CONFIG_INITRAMFS_ROOT_UID=0
 CONFIG_INITRAMFS_ROOT_GID=0
 CONFIG_INITRAMFS_COMPRESSION=".gz"
+```
+* build (if change rootfs only, just execute make all)    
+```
+export PATH=~/uclinux/stm32/gcc-arm-none-eabi-4_9-2014q4/bin:$PATH
+make ARCH=arm CROSS_COMPILE=arm-none-eabi- stm32_defconfig
+make ARCH=arm CROSS_COMPILE=arm-none-eabi-
 ```
 
 ## (OLD) elinux's linux and cpio rootfs  
