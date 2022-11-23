@@ -1,7 +1,33 @@
 # wmt_uclinux_study
 My uclinux study
 
-## (TODO) elinux's linux and cpio rootfs  
+## elinux's linux build  
+* STM32F429I-DISCO ucLinux 开发环境搭建  
+* https://blog.csdn.net/u010444107/article/details/78580947  
+* Stm32f429移植linux4.13.12  
+* https://blog.csdn.net/u011371090/article/details/81587170  
+* images002_v5_after_burn.bin  
+* images002_v5_success_use_4.14.0.rar  
+* init没有执行权限失败, 以及没有用sudo解压cpio  
+* gcc: gcc-arm-none-eabi-4_9-2014q4  
+* (NOTE) must use sudo to extract cpio     
+mkdir Stm32_mini_rootfs  
+cd Stm32_mini_rootfs  
+sudo cpio -idmv < ../Stm32_mini_rootfs.cpio  
+* (NOTE) MUST use linux-4.14.tar.xz  
+or if use linux-4.14.299.tar.xz, will see kernel panic: init Not tainted  
+* create file under Stm32_mini_rootfs: /init  
+```
+#!/bin/sh
+# devtmpfs does not get automounted for initramfs
+/bin/mount -t devtmpfs devtmpfs /dev
+exec 0</dev/console
+exec 1>/dev/console
+exec 2>/dev/console
+exec /sbin/init $*
+```
+
+## (OLD) elinux's linux and cpio rootfs  
 * STM32F469I-DISCO移植Linux4.13.12  
 * https://www.likecs.com/show-205025138.html  
 * https://github.com/mcoquelin-stm32/afboot-stm32  
