@@ -1,7 +1,10 @@
 # wmt_uclinux_study
 My uclinux study
 
-## elinux's linux build  
+## (TODO) Aboriginal Linux  
+http://landley.net/aboriginal/screenshots/  
+
+## (Built, Tested) elinux's linux build  
 * STM32F429I-DISCO ucLinux 开发环境搭建  
 * https://blog.csdn.net/u010444107/article/details/78580947  
 * Stm32f429移植linux4.13.12  
@@ -50,9 +53,6 @@ make ARCH=arm CROSS_COMPILE=arm-none-eabi-
 * https://www.kernel.org/  
 * 下载最新的Linux内核linux-4.13.12.tar.xz  
 * https://elinux.org/File:Stm32_mini_rootfs.cpio.bz2   
-
-## (TODO) Aboriginal Linux  
-http://landley.net/aboriginal/screenshots/  
 
 ## (Built, Tested) uclinux skyeye build  
 * uclinux_04_skyeye_1.2.5_build_output.tar.gz  
