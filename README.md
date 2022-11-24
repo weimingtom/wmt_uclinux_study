@@ -1,6 +1,8 @@
 # wmt_uclinux_study
 My uclinux study
 
+## (TODO) main line buildroot, main line linux  
+
 ## (TODO) Aboriginal Linux  
 http://landley.net/aboriginal/screenshots/  
 
