@@ -11,6 +11,7 @@ My uclinux study
 * init没有执行权限失败, 以及没有用sudo解压cpio  
 * gcc: gcc-arm-none-eabi-4_9-2014q4  
 https://launchpad.net/gcc-arm-embedded/4.9/4.9-2014-q4-major  
+* ubuntu: ubuntu 140432  
 * (NOTE) must use sudo to extract cpio     
 mkdir Stm32_mini_rootfs  
 cd Stm32_mini_rootfs  
