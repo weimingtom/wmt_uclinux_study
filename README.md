@@ -1,6 +1,8 @@
 # wmt_uclinux_study
 My uclinux study
 
+## (TODO) https://github.com/i25ffz/uclinux-stm32f4  
+
 ## (TODO) main line buildroot, main line linux  
 
 ## (TODO) Aboriginal Linux  
@@ -157,3 +159,6 @@ PC10<->RXD(yellow)
 ## k210-linux-nommu  
 * https://github.com/vowstar/k210-linux-nommu  
 * https://www.cnx-software.com/2020/02/17/how-to-build-run-linux-on-kendryte-k210-risc-v-nommu-processor/  
+
+## uCLinux启动日志, NXP IMXRT1050 board  
+* https://www.jianshu.com/p/0258d037b026  
