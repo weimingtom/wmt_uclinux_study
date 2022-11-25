@@ -163,3 +163,14 @@ PC10<->RXD(yellow)
 
 ## uCLinux启动日志, NXP IMXRT1050 board  
 * https://www.jianshu.com/p/0258d037b026  
+
+## https://github.com/jdkoftinoff/mb-linux-msli  
+
+## mount romfs  
+```
+ls /mnt  
+sudo mount <romfs.img> /mnt -o loop  
+sudo umount /mnt  
+```
+* https://blog.csdn.net/enthan809882/article/details/113172192  
+* https://blog.csdn.net/chengwenyang/article/details/71841862  
