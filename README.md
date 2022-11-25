@@ -175,6 +175,6 @@ sudo umount /mnt
 * https://blog.csdn.net/enthan809882/article/details/113172192  
 * https://blog.csdn.net/chengwenyang/article/details/71841862  
 
-## search linux-STMDISCO  
+## search arm-2010q1-189-arm-uclinuxeabi-i686-pc-linux-gnu.tar.bz2  
 * https://emcraft.com/products/343  
 * https://emcraft.com/stm32f429discovery/installing-linux-images-to-internal-flash  
