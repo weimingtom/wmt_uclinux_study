@@ -128,6 +128,7 @@ PC10<->RXD(yellow)
 
 ## uc-PC 序言  
 * https://hhuysqt.github.io/ucpc0/  
+* https://hhuysqt.github.io/tags/  
 
 ## (Built, Tested) STM32F429I-disco_Buildroot, need mod linux and busybox source see issues    
 * https://github.com/fdu/STM32F429I-disco_Buildroot  
