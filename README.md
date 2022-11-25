@@ -3,10 +3,20 @@ My uclinux study
 
 ## (TODO) https://github.com/i25ffz/uclinux-stm32f4  
 
-## (TODO) main line buildroot, main line linux  
+## (TODO) main line linux  
 
 ## (TODO) Aboriginal Linux  
 http://landley.net/aboriginal/screenshots/  
+
+## (Built, Tested) main line buildroot  
+* 我用ubuntu 14编译较新版本（2022.02）的buildroot的STM32F429固件，  
+* 可以编译和正常运行（需要改一下elf2flt的patch，把bool改成int，  
+* 把true改成1，把false改成0）。具体我就不截图了，  
+* 最终编译出来的linux版本是5.15.0。说明编译较新的buildroot也可以  
+* ubuntu 140432  
+* buildroot-2022.02.7.tar.gz  
+* search buildroot-2022.02.7_after_burn.bin  
+* usart: st-link v2 on board  
 
 ## (Built, Tested) elinux's linux build  
 * STM32F429I-DISCO ucLinux 开发环境搭建  
