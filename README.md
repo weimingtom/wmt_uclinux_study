@@ -190,3 +190,8 @@ sudo umount /mnt
 * https://emcraft.com/stm32f429discovery/installing-linux-images-to-internal-flash  
 
 ## https://github.com/hujiafu/lpc1788_uclinux  
+
+## linux-emcraft for stm32f746, framebuffer LCD driver      
+* https://github.com/angmouzakitis/linux-stm32f7/blob/master/arch/arm/configs/stm32f746_disco_defconfig  
+* https://elinux.org/STM32  
+
