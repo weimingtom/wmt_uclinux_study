@@ -189,7 +189,13 @@ sudo umount /mnt
 * https://emcraft.com/products/343  
 * https://emcraft.com/stm32f429discovery/installing-linux-images-to-internal-flash  
 
-## https://github.com/hujiafu/lpc1788_uclinux  
+## lpc1788 uclinux, EA LPC1788 board    
+* https://github.com/hujiafu/lpc1788_uclinux  
+* EA LPC1788 Evaluation Board  
+* https://www.nxp.com/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-arm-cortex-m3/ea-lpc1788-evaluation-board:OM13001  
+* https://www.nxp.com.cn/products/processors-and-microcontrollers/arm-microcontrollers/general-purpose-mcus/lpc1700-arm-cortex-m3/ea-lpc1788-evaluation-board:OM13001  
+* 128 MB NAND FLASH + 512 kB internal  
+* 32 MB SDRAM + 96 kB internal  
 
 ## linux-emcraft for stm32f746, framebuffer LCD driver      
 * https://github.com/angmouzakitis/linux-stm32f7/blob/master/arch/arm/configs/stm32f746_disco_defconfig  
