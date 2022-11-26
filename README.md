@@ -1,6 +1,9 @@
 # wmt_uclinux_study
 My uclinux study
 
+## (TODO) uclinux下stm32开发环境搭建  
+* http://www.eepw.com.cn/article/201808/388127.htm  
+
 ## (TODO) https://github.com/i25ffz/uclinux-stm32f4  
 
 ## (TODO) main line linux  
