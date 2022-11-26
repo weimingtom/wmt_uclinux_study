@@ -188,3 +188,5 @@ sudo umount /mnt
 ## search arm-2010q1-189-arm-uclinuxeabi-i686-pc-linux-gnu.tar.bz2  
 * https://emcraft.com/products/343  
 * https://emcraft.com/stm32f429discovery/installing-linux-images-to-internal-flash  
+
+## https://github.com/hujiafu/lpc1788_uclinux  
