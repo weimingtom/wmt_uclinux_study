@@ -1,6 +1,8 @@
 # wmt_uclinux_study
 My uclinux study
 
+## (TODO) change cross compiler for uclinux  
+
 ## (TODO) uclinux下stm32开发环境搭建  
 * http://www.eepw.com.cn/article/201808/388127.htm  
 
