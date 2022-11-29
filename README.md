@@ -214,5 +214,5 @@ sudo umount /mnt
 * https://www.nxp.com/files-static/32bit/doc/prod_brief/MC68EZ328.pdf  
 * http://www.mediumware.net/DragonOne/DragonOne.htm  
 
-## LPC2200 uclinux port  
+## LPC2200 (actually LPC2210) uclinux port  
 * search baidupan, SmartARM2200光盘  
