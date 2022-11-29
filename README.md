@@ -213,3 +213,6 @@ sudo umount /mnt
 * https://elinux.org/images/a/a1/M68ez328-user-man.pdf  
 * https://www.nxp.com/files-static/32bit/doc/prod_brief/MC68EZ328.pdf  
 * http://www.mediumware.net/DragonOne/DragonOne.htm  
+
+## LPC2200 uclinux port  
+* search baidupan, SmartARM2200光盘  
