@@ -157,7 +157,7 @@ PC10<->RXD(yellow)
 * https://web.archive.org/web/20120501030746/http://www.uclinux.org/pub/uClinux/dist/patches/  
 * https://community.st.com/s/question/0D53W000005q7duSAA/uclinux-patch-for-stm32f10x-devices  
 
-## (Not built, Tested) DZ51's S3C44B0X uclinux  
+## (Not built, Tested ok only on board, but failed with skyeye) DZ51's S3C44B0X uclinux  
 * search baidupan, ARM 44BOX.iso  
 * search baidupan, DZ51_ARM使用手册.pdf  
 
