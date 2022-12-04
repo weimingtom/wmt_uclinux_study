@@ -13,7 +13,7 @@ My uclinux study
 ## (TODO) Aboriginal Linux  
 http://landley.net/aboriginal/screenshots/  
 
-## (Built, Tested) skyeye, uclinux 0404, for samsung s3c4510b  
+## (Built, Tested) skyeye 1.2.5, uclinux 0404, for samsung s3c4510b  
 * search uc_20040408_4510b_patch_v3.tar.gz  
 * build about 2 minutes  
 * 我整理出编译三星4510b的uclinux 0404 skyeye固件的方法，全程大概需要2分钟左右，  
@@ -32,6 +32,21 @@ $ rm -rf /usr/local/include
 https://blog.csdn.net/mybirdsky/article/details/2058769  
 ubuntu下编译uclinux skyeye上运行  
 https://blog.csdn.net/paoxungan5156/article/details/72667924  
+* skyeye.conf, from skyeye-testsuite-1.2.5.tar.bz2, see sourceforge    
+```
+#skyeye config file sample
+cpu: arm7tdmi
+
+mach: s3c4510b 
+
+
+mem_bank: map=M, type=RW, addr=0x00000000, size=0x00800000
+mem_bank: map=M, type=RW, addr=0x04000000, size=0x00800000
+mem_bank: map=M, type=R,  addr=0x01000000, size=0x00200000
+mem_bank: map=I, type=RW, addr=0x03ff0000, size=0x00010000
+net: type=s3c4510b, hostip=10.0.0.2, ethmod=tuntap
+#dbct:state=on
+```
 
 ## (Built, Tested) main line buildroot  
 * 我用ubuntu 14编译较新版本（2022.02）的buildroot的STM32F429固件，  
