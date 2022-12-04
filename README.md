@@ -27,6 +27,7 @@ http://landley.net/aboriginal/screenshots/
 $ sudo tar xzf arm-elf-compiler.tar.gz -C /usr/local  
 $ rm -rf /usr/local/include  
 (test ar) $ arm-elf-ar  
+* run: skyeye -e linux-2.4.x/linux  
 * patch ref:  
 如何编译一个可以运行的 uClinux Kernel  
 https://blog.csdn.net/mybirdsky/article/details/2058769  
