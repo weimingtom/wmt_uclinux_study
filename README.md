@@ -3,6 +3,7 @@ My uclinux study
 
 ## WL-530g  
 https://github.com/xurubin/wl530g-mini  
+https://github.com/Broadcom/stblinux-2.6.37  
 
 ## (TODO) proteus port    
 * 基于ARM7的ucLinux内核移植的proteus仿真  
