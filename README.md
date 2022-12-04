@@ -10,7 +10,9 @@ https://github.com/MVoz/mipsonqemu
 * 基于ARM7的ucLinux内核移植的proteus仿真  
 * https://blog.csdn.net/qq_33782655/article/details/79396891  
 
-## (TODO) LPC2210  
+## (TODO) LPC2210, LPC2200    
+see skyeye-1.2.6_rc1/misc/uClinux/uClinux-dist-20040408-lpc.diff  
+see skyeye-1.3.5_rc1/...  
 
 ## (TODO) change cross compiler for uclinux  
 
