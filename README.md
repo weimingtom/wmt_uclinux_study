@@ -13,6 +13,26 @@ My uclinux study
 ## (TODO) Aboriginal Linux  
 http://landley.net/aboriginal/screenshots/  
 
+## (Built, Tested) skyeye, uclinux 0404, for samsung s3c4510b  
+* search uc_20040408_4510b_patch_v3.tar.gz  
+* build about 2 minutes  
+* 我整理出编译三星4510b的uclinux 0404 skyeye固件的方法，全程大概需要2分钟左右，  
+对比起buildroot快得多（buildroot大概最快也要十分钟左右，甚至可能要一两个小时），  
+下一步看能不能合并到44b0x的代码中去（因为我手头上的开发板SDK似乎也是基于uclinux 0404版改的）。  
+另外补充一点，我本来打算用一个简单的make编译，后来发现不行，只能用shell脚本编译，  
+依次执行多个make命令，否则编译出来的固件会跑不动。另外我这种方法参考网上的做法，  
+但代价是需要编译两次镜像，因为romfs需要在linux之后编译（不知道为什么），  
+但linux需要在rootfs.o生成之后编译，所以要编译两次内核，第一次要用一个临时的rootfs.o代替  
+* gcc: ubuntu 140432  
+$ sudo tar xzf arm-elf-compiler.tar.gz -C /usr/local  
+$ rm -rf /usr/local/include  
+(test ar) $ arm-elf-ar  
+* patch ref:  
+如何编译一个可以运行的 uClinux Kernel  
+https://blog.csdn.net/mybirdsky/article/details/2058769  
+ubuntu下编译uclinux skyeye上运行  
+https://blog.csdn.net/paoxungan5156/article/details/72667924  
+
 ## (Built, Tested) main line buildroot  
 * 我用ubuntu 14编译较新版本（2022.02）的buildroot的STM32F429固件，  
 * 可以编译和正常运行（需要改一下elf2flt的patch，把bool改成int，  
