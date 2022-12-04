@@ -1,6 +1,12 @@
 # wmt_uclinux_study
 My uclinux study
 
+## (TODO) proteus port    
+* 基于ARM7的ucLinux内核移植的proteus仿真  
+* https://blog.csdn.net/qq_33782655/article/details/79396891  
+
+## (TODO) LPC2210  
+
 ## (TODO) change cross compiler for uclinux  
 
 ## (TODO) uclinux下stm32开发环境搭建  
