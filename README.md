@@ -80,16 +80,16 @@ net: type=s3c4510b, hostip=10.0.0.2, ethmod=tuntap
 * images002_v5_after_burn.bin  
 * images002_v5_success_use_4.14.0.rar  
 * init没有执行权限失败, 以及没有用sudo解压cpio  
-* gcc: gcc-arm-none-eabi-4_9-2014q4  
+* (**NOTE**) gcc: gcc-arm-none-eabi-4_9-2014q4  
 https://launchpad.net/gcc-arm-embedded/4.9/4.9-2014-q4-major  
 * ubuntu: ubuntu 140432  
-* (NOTE) must use sudo to extract cpio     
+* (**NOTE**) must use sudo to extract cpio     
 mkdir Stm32_mini_rootfs  
 cd Stm32_mini_rootfs  
 sudo cpio -idmv < ../Stm32_mini_rootfs.cpio  
-* (NOTE) MUST use linux-4.14.tar.xz  
+* (**NOTE**) MUST use linux-4.14.tar.xz  
 or if use linux-4.14.299.tar.xz, will see kernel panic: init Not tainted  
-* create file under Stm32_mini_rootfs: /init, and chmod 755 init    
+* (**NOTE**) create file under Stm32_mini_rootfs: /init, and sudo chmod 755 init    
 ```
 #!/bin/sh
 # devtmpfs does not get automounted for initramfs
