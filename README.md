@@ -72,7 +72,7 @@ net: type=s3c4510b, hostip=10.0.0.2, ethmod=tuntap
 * search buildroot-2022.02.7_after_burn.bin  
 * usart: st-link v2 on board  
 
-## (Built, Tested) elinux's linux build  
+## (Built, Tested) elinux's linux build, only linux-4.14.0 (other version failed)      
 * STM32F429I-DISCO ucLinux 开发环境搭建  
 * https://blog.csdn.net/u010444107/article/details/78580947  
 * Stm32f429移植linux4.13.12  
