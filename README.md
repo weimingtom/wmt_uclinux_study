@@ -271,3 +271,7 @@ sudo umount /mnt
 * search 源码开放的嵌入式系统软件分析与实践  
 * P.130, P.239  
 
+## NUC710, NUC745, W90P710    
+* search NUC7X_CD.iso, uClinux-Arm7.tar.gz  
+* http://www.metavert.com/public/    
+* http://www.computersolutions.cn/blog/zh/2010/04/ip-cam-hacking-pt5/  
