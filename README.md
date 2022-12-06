@@ -285,3 +285,13 @@ sudo umount /mnt
 ## ubuntu8.04上搭建uClinux编译开发环境并用skyeye仿真  
 * hello    
 * https://blog.csdn.net/tony821224/article/details/4988275  
+```
+//arm-elf-gcc -Wl,-elf2flt -o Hello Hello.c
+#include<stdio.h>
+int main()
+{
+    printf("Hello!This is Embedded Linux!");
+    return 0;
+}
+```
+
