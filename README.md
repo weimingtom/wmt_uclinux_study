@@ -275,3 +275,9 @@ sudo umount /mnt
 * search NUC7X_CD.iso, uClinux-Arm7.tar.gz  
 * http://www.metavert.com/public/    
 * http://www.computersolutions.cn/blog/zh/2010/04/ip-cam-hacking-pt5/  
+
+## 中科大  
+* http://staff.ustc.edu.cn/~xlanchen/resources.html  
+
+## snapgear  
+* http://www.snapgear.org/index.html  
