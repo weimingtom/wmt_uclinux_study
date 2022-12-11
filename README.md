@@ -1,7 +1,8 @@
 # wmt_uclinux_study
 My uclinux study
 
-## Java emulator, m68k emulator repurposed to run Katy68 PCB linux for debugging and testing  
+## jaty68k, Java emulator  
+* m68k emulator repurposed to run Katy68 PCB linux for debugging and testing    
 * https://github.com/alexwinston/Jaty68k  
 * https://github.com/tonyheadford/m68k  
 * http://www.bigmessowires.com/68-katy/  
