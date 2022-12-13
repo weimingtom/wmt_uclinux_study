@@ -1,6 +1,15 @@
 # wmt_uclinux_study
 My uclinux study
 
+## how to unzip uclinux cross-compiler .sh file    
+* 我知道怎么解压uclinux的交叉工具链sh文件了——其实只要用notepad++删掉开头那部分文本即可，然后重命名为.tar.gz，然后就可以用压缩软件打开  
+* 网上的解决方法是  
+将第39行的代码：  
+tail +${SKIP} ${SCRIPT} | gunzip | tar xvf -  
+改成如下：  
+tail -n +${SKIP} ${SCRIPT} | gunzip | tar xvf -  
+* see https://github.com/darkspr1te/s3c44b0x  
+
 ## jaty68k, Java emulator  
 * m68k emulator repurposed to run Katy68 PCB linux for debugging and testing    
 * https://github.com/alexwinston/Jaty68k  
