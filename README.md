@@ -1,6 +1,9 @@
 # wmt_uclinux_study
 My uclinux study
 
+## sh-2, superh, J2 open processor, j-core, run linux  
+* https://j-core.org/#get_hardware  
+
 ## how to unzip uclinux cross-compiler .sh file    
 * 我知道怎么解压uclinux的交叉工具链sh文件了——其实只要用notepad++删掉开头那部分文本即可，然后重命名为.tar.gz，然后就可以用压缩软件打开  
 * 网上的解决方法是  
