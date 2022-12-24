@@ -1,6 +1,9 @@
 # wmt_uclinux_study
 My uclinux study
 
+## h8 uclinux, h8max, H8/3069F    
+* https://strawberry-linux.com/h8max/  
+
 ## sh-2, superh, J2 open processor, j-core, run linux  
 * https://j-core.org/#get_hardware  
 
