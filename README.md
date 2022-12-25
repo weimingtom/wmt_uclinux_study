@@ -1,6 +1,10 @@
 # wmt_uclinux_study
 My uclinux study
 
+## (TODO) s3c44b0x, some help and material      
+* https://github.com/darkspr1te/s3c44b0x  
+* https://gitee.com/weimingtom2000/s3c44b0x  
+
 ## h8 uclinux, h8max, H8/3069F    
 * https://strawberry-linux.com/h8max/  
 
