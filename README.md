@@ -1,7 +1,7 @@
 # wmt_uclinux_study
 My uclinux study
 
-## (TODO) s3c44b0x, some help and material      
+## (TODO) s3c44b0x, some document  
 * https://github.com/darkspr1te/s3c44b0x  
 * https://gitee.com/weimingtom2000/s3c44b0x  
 
