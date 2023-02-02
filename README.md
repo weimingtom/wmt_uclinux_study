@@ -324,6 +324,8 @@ int main()
 * 第一块烧录flash但无法运行，换核心板也不行，第二块蜂鸣器有问题但可以烧录运行流水灯和运行uclinux  
 * work_lpc2210_v2_运行uclinux_不需要烧录nand_flash_原本有.rar  
 * work_lpc2210_第二块smartarm2200_成功点灯_v1_未考虑ads1.2.rar  
+* 运行流水灯需要编译RelOutChip，post动作下拉选elf2bin，elf2bin选intel 32 hex，指定文件路径  
+* 然后用j-flash烧录（jflash文件具体好像是在安装目录找得到，需要改存储器类型，已经打包到rar文件）  
 * 115200-8-1-none-none, uart0    
 * j-flash, zlg_boot.hex (连接ISP JP1跳帽, erase chip, 烧录zlg_boot.hex, 断开ISP JP1跳帽)    
 
