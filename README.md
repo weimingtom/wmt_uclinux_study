@@ -328,5 +328,6 @@ int main()
 * 然后把hex文件复制出来，用j-flash烧录（jflash配置文件具体好像是在安装目录找得到，需要改存储器类型，已经打包到rar文件）  
 * putty串口配置：115200-8-1-none-none, uart0    
 * j-flash, zlg_boot.hex (连接ISP JP1跳帽, erase chip, 烧录zlg_boot.hex, 断开ISP JP1跳帽)    
-
+* 内存布局跳帽选模式1：bank0是flash，bank1是psram。flash起始地址是0x8000_0000。  
+* 另外有第三个存储器nand flash（起始地址见work_lpc2210_v2里面的原理图），用于烧录demo和uclinux，似乎无法用j-flash查看  
 
