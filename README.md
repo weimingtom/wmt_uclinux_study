@@ -1,6 +1,10 @@
 # wmt_uclinux_study
 My uclinux study
 
+## qemu早就可以跑stm32程序了。很简单：  
+* https://www.cnblogs.com/qmjc/p/15226236.html  
+* https://github.com/nviennot/stm32-emulator  
+
 ## 转，终于将uClinux移植于fpga成功  
 * https://blog.csdn.net/frank_wff/article/details/42122759  
 
