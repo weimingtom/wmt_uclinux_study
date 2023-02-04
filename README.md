@@ -1,6 +1,9 @@
 # wmt_uclinux_study
 My uclinux study
 
+## 转，终于将uClinux移植于fpga成功  
+* https://blog.csdn.net/frank_wff/article/details/42122759  
+
 ## 编译、移植uClinux到S3C44B0  
 * https://www.php1.cn/detail/linux-369062ca93.html  
 * https://github.com/weimingtom/wmt_uclinux_study/blob/master/s3c44b0x_001.txt  
