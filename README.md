@@ -1,6 +1,10 @@
 # wmt_uclinux_study
 My uclinux study
 
+## 编译、移植uClinux到S3C44B0  
+* https://www.php1.cn/detail/linux-369062ca93.html  
+* https://github.com/weimingtom/wmt_uclinux_study/blob/master/s3c44b0x_001.txt  
+
 ## (TODO) s3c44b0x, some document  
 * https://github.com/darkspr1te/s3c44b0x  
 * https://gitee.com/weimingtom2000/s3c44b0x  
