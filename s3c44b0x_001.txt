@@ -1,0 +1,71 @@
+https://www.php1.cn/detail/linux-369062ca93.html
+
+编译、移植uClinux到S3C44B0
+作者：手机用户2502895961 | 来源：互联网 | 2017-07-16 21:12
+编译、移植uClinux到S3C44B0--Linux通用技术-Linux编程与内核信息，下面是详情阅读。
+1、先下载uClinux源码包。可以从http://www.uclinux.org或从http://www.hzlitai.com.cn/download/default.asp网站上均可以下载，我用的是uClinux-dist-20040408.tar.gz版本。
+
+2、下载交叉编译器，同样可从以上两个网站下载，推荐使用arm-elf-tools-20030314.sh
+3、另外，我还从论坛上下载了一个44B0的补丁文件uClinux－20040408.patch。可以打开这个补丁文件看它修改了源码的哪些地方，可以学着手动修改源码，不过难度较大，编译时经常出现错误。打补丁文件是最方便的，其实如果对源码修改很熟悉的话，你也可以自己试着写一个补丁文件。在http://www-128.ibm.com/developer ... cn-newsletter-linux中有关于补丁文件编写的语法和格式说明。
+4、将uClinux-dist-20040408.tar.gz拷贝到/home/下（或者其它目录都可以），运行解压命令：tar xvzf uClinux-ARMSYS-20040801.tar.gz
+解压结束后会在/home/下生成uClinux-dist目录。
+安装补丁文件：把uClinux－20040408.patch文件拷贝到uClinux-dist目录下，运行命令：patch ?p0 安装交叉编译器：将arm-elf-tools-20030314.sh拷贝到根目录，运行安装：
+sh arm-elf-tools-20030314.sh它会自动安装在usr/local/目录下。在终端键入arm-elf-gcc ?v如果能看到如下的输出信息：Reading specs from /usr/local/lib/gcc-lib/arm-elf/2.95.3/specsgcc version 2.95.3 20010315 (release)(ColdFire patches - 20010318 from http://fiddes.net/coldfire/) (uClinux XIP and shared lib patches from http://www.snapgear.com/) 则说明已经安装成功。
+5、 配置内核：cd uClinux-dist进入uClinux-dist目录下,运行make menuconfig命令后会出现内核配置界面，开发板结构选择Samsung,芯片类型选择4510B（这个无所谓，它里面已经支持了44B0，只是一个名称上的问题）。UCLinux版本号选择linux-2.4.x，库文件选择uClib，并选中定制内核设置和定制用户应用程序设置选项：
+[* ] Customize Kernel Settings
+[* ] Customize Vendor/User Settings
+退出并选择保存。
+然后系统进行一些预处理，中间可能会提示让你选择是否支持一些其它类型开发板的串口。这些可以不理，直接回车采用默认配置。随后会进入内核定制界面，在最下面倒数第二行（好像是）有个选项“载入内核配置文件”，选中该项并回车，这时让你输入配置文件，因为我们的配置文件在打补丁时已经生成在默认目录下，所以在此只需输入文件名即可：kernel_44b0.cfg。这样内核会自动载入一些默认配置，当然你可以在载入配置文件后根据自己的需要来查看每一配置菜单下的内容，也可以根据自己的需要来添加或去掉一些选项，如果添加或去掉了一些选项，最好保存一下自己的配置，选中最后一个菜单选项“保存配置文件”回车，输入自定义的文件名即可。这样做的目的是为了不影响kernel_44b0.cfg文件，否则你修改了一些配置后系统会重新生成一个配置文件来覆盖kernel_44b0.cfg。修改完毕后退出并保存。
+随后是对用户应用程序的配置界面，基本上的过程类似于上面配置内核的步骤，也是先载入配置文件user_44b0.cfg，在此基础上可以把不需要的一些应用程序去掉，这样可以使编译出的内核映象和根文件系统映象所占的空间最小化。配置完毕后退出并保存。
+6、编译内核：按下面的步骤对内核进行编译
+# make dep
+# make clean (非必要，主要是清除前面编译过程中生成的中间文件)
+# make lib_only
+# make user_only
+# make romfs (生成根文件系统映象)
+# make image（可能到最后有两个错误，不用理会，不影响后面的编译）
+# make
+这一系列的编译操作大概需要十五分钟左右的时间。
+编译完成后将在Clinux-dist/image下生成image.ram,image.rom,romfs.img三个文件，其中image.ram是非压缩格式的内核映象文件，image.rom是压缩格式的内核映象文件，romfs.img根文件系统的映象文件。如果想用Flash Programmer把内核映象和根文件系统映象烧入Flash中，可以把它们改成后缀名为.bin格式的文件，烧入即可。
+说明：因为我们用的Flash是2MB的，比较小，所以最好烧入压缩格式的内核映象文件，大概有500K左右大小，非压缩格式的为1M左右大小。此外，根文件系统映象为500K左右大小。
+Bootloader在启动后会把image.rom和romfs.img拷贝到RAM中的指定地址，等启动程序把CPU控制权交给内核后，该压缩内核会自解压到另外一个地址，这些都是在内核中指定的，可以修改相应源码中的这些地址。如果不一致则内核无法启动，根文件系统也无法挂载。
+6、应用程序的添加：
+①在uClinux-dist/user目录下新建目录Myapp；
+②编写自己的应用程序，这里以HelloWorld应用程序为例来说明添加的过程：
+在Myapp目录下建立hello.c文件，代码如下：
+#include
+#include
+int main(void)
+{
+printf("Hello! My name is Sun hefei! This is my first application.\n");
+return 0;
+}
+③在Myapp目录下建立MakeFile文件，其代码内容如下(该文件内容可参考user/musicbox/下的MakeFile文件)：
+all: hello
+hello: hello.o
+$(CC) -Wall $(LDFLAGS) -o $@ hello.o $(LDLIBS)
+$(EXEC): $(OBJS)
+$(CC) $(LDFLAGS) -o $@ $(OBJS) $(LDLIBS)
+romfs:
+$(ROMFSINST) /bin/hello
+clean:
+-rm -f hello *.elf *.gdb *.o
+④修改user/MakeFile:
+为了让编译器编译上述添加的内容，在该文件中添加一句（一般按字母排序）：
+dir_$(CONFIG_USER_MYAPP_HELLO) +=Myapp
+⑤修改config/config.in
+在该文件最后添加如下内容:
+############################################
+mainmenu_option next_comment
+comment ‘My New Application’
+
+
+bool ‘hello’ CONFIG_USER_MYAPP_HELLO
+endmenu
+############################################
+⑥配置编译：
+在配置用户应用程序时，我们会看到最后多了一个菜单：
+My New Application???>进入后选中hello即可[* ]hello,按照上面的编译步骤进行编译，产生新的romfs.img文件，重新下载到开发板Flash中。
+(应用程序也可以编译好再拷贝到文件系统中，然后make image;make即可!运行只需进入相应文件夹执行即可!)此方法比较快捷<<<<<<<
+⑦运行：uClinux启动后直接键入hello回车后即可运行该自定义的应用程序。
+
