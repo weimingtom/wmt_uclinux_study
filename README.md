@@ -8,6 +8,7 @@ My uclinux study
 Cortex-M based microcontrollers and bords. In fact, it supports the STM32F4-Discovery, great!!.
 * https://aperles.blogs.upv.es/2020/04/15/simulation-emulation-of-the-stm32f4-discovery-board/  
 * https://xpack.github.io/qemu-arm/  
+* https://github.com/xpack-dev-tools/qemu-arm-xpack/releases/  
 
 ## 转，终于将uClinux移植于fpga成功  
 * https://blog.csdn.net/frank_wff/article/details/42122759  
