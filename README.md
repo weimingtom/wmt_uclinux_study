@@ -347,14 +347,24 @@ int main()
 * 内存布局跳帽选模式1：bank0是flash，bank1是psram。flash起始地址是0x8000_0000。  
 * 另外有第三个存储器nand flash（起始地址见work_lpc2210_v2里面的原理图），用于烧录demo和uclinux，似乎无法用j-flash查看  
 
-## uclinux fbcon  
+## (TODO) uclinux fbcon  
 * https://www.stmcu.org.cn/module/forum/forum.php?mod=viewthread&tid=624411&highlight=STM32F429%2BDis  
 console=ttySTM0,115200 root=/dev/ram rdinit=/linuxrc loglevel=8 console=/dev/fb0 fbcon=map:0  
 * https://unix.stackexchange.com/questions/602917/can-we-run-linux-on-nucleo-stm32f429zi-board  
 * https://www.twblogs.net/a/5f03b9dee53eaf40aa87ac31  
+stm32f429-linux-builder  
 stm32_platform=stm32429-disco mem=7M console=ttyS2,115200n8 consoleblank=0 root=/dev/mtdblock0 rdinit=/sbin/init video=vfb:enable,fbmem:0x90700000,fbsize:0x100000  
 * https://www.mikrocontroller.net/articles/Linux_auf_STM32  
 * https://github.com/jserv/stm32f429-linux-builder  
-* http://github.com/lisongze2016/stm32f429-linux-builder  
+http://github.com/lisongze2016/stm32f429-linux-builder  
+2022-11-11, 我的第二块可以跑uclinux的开发板（这次要自己编译固件），stm32f429i-disc1，有2M的flash，  
+带SDRAM，控制台串口输出如下，linux 2.6。代码在stm32f429-linux-builder，  
+自己编译u-boot和内核，busybox，但文件系统似乎没有源码  
 * (no fb actually, but have image) https://github.com/fdu/STM32F429I-disco_Buildroot  
 root=/dev/ram  
+2022-11-12, 编译运行成功buildroot版的uclinux，串口效果如图  
+（串口是st-link的虚拟串口）。开发板是STM32F429I-DISC1，使用buildroot是2018.02，  
+仓库是STM32F429I-disco_Buildroot（参考elinux）。  
+你可能好奇为什么不用最新版的buildroot？因为编译麻烦，  
+这个版本其实也麻烦，而且编译出来不能用，要根据issue来改，  
+不过可以改到运行成功，心累  
