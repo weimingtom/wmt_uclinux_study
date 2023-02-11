@@ -363,12 +363,19 @@ int main()
 ```
 
 ## SmartARM 2200, LPC2210  
-* 第一块烧录flash但无法运行，换核心板也不行，第二块蜂鸣器有问题但可以烧录运行流水灯和运行uclinux  
-* work_lpc2210_v2_运行uclinux_不需要烧录nand_flash_原本有.rar  
-* work_lpc2210_第二块smartarm2200_成功点灯_v1_未考虑ads1.2.rar  
-* 运行流水灯需要编译RelOutChip，post linker动作下拉选fromelf，然后fromelf里面下拉选intel 32 bit hex，指定文件路径  
-* 然后把hex文件复制出来，用j-flash烧录（jflash配置文件具体好像是在安装目录找得到，需要改存储器类型，已经打包到rar文件）  
-* putty串口配置：115200-8-1-none-none, uart0    
-* j-flash, zlg_boot.hex (连接ISP JP1跳帽, erase chip, 烧录zlg_boot.hex, 断开ISP JP1跳帽)    
-* 内存布局跳帽选模式1：bank0是flash，bank1是psram。flash起始地址是0x8000_0000。  
-* 另外有第三个存储器nand flash（起始地址见work_lpc2210_v2里面的原理图），用于烧录demo和uclinux，似乎无法用j-flash查看  
+* 最新跑通全部三块smartarm    
+哭死，今天入手了第三个smartarm2200，然后我发现我买的三块smartarm2200都是正常的  
+（除了第二块的蜂鸣器有问题）。为什么当初第一块烧录不了呢？是因为要连接ISP跳帽后按一下reset，  
+如果不按的话很可能就算全清chip都没办法进入烧录模式。为什么串口有时候没输出呢？  
+那是因为需要按reset按钮，碰运气串口才会有显示。总而言之我手头的三块都可以运行uclinux，  
+内部的nand flash内容没有被冲走  
+* 开始时候没有搞懂怎么烧录，下面内容是旧的  
+第一块烧录flash但无法运行，换核心板也不行，第二块蜂鸣器有问题但可以烧录运行流水灯和运行uclinux  
+work_lpc2210_v2_运行uclinux_不需要烧录nand_flash_原本有.rar  
+work_lpc2210_第二块smartarm2200_成功点灯_v1_未考虑ads1.2.rar  
+运行流水灯需要编译RelOutChip，post linker动作下拉选fromelf，然后fromelf里面下拉选intel 32 bit hex，指定文件路径  
+然后把hex文件复制出来，用j-flash烧录（jflash配置文件具体好像是在安装目录找得到，需要改存储器类型，已经打包到rar文件）  
+putty串口配置：115200-8-1-none-none, uart0    
+j-flash, zlg_boot.hex (连接ISP JP1跳帽, erase chip, 烧录zlg_boot.hex, 断开ISP JP1跳帽)    
+内存布局跳帽选模式1：bank0是flash，bank1是psram。flash起始地址是0x8000_0000。  
+另外有第三个存储器nand flash（起始地址见work_lpc2210_v2里面的原理图），用于烧录demo和uclinux，似乎无法用j-flash查看  
