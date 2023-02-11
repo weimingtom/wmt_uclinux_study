@@ -368,3 +368,6 @@ root=/dev/ram
 你可能好奇为什么不用最新版的buildroot？因为编译麻烦，  
 这个版本其实也麻烦，而且编译出来不能用，要根据issue来改，  
 不过可以改到运行成功，心累  
+* https://elinux.org/STM32#STM32F429i-Discovery  
+* https://github.com/buildroot/buildroot/tree/master/board/stmicroelectronics/stm32f429-disco  
+* https://github.com/buildroot/buildroot/blob/master/configs/stm32f429_disco_xip_defconfig  
