@@ -347,3 +347,14 @@ int main()
 * 内存布局跳帽选模式1：bank0是flash，bank1是psram。flash起始地址是0x8000_0000。  
 * 另外有第三个存储器nand flash（起始地址见work_lpc2210_v2里面的原理图），用于烧录demo和uclinux，似乎无法用j-flash查看  
 
+## uclinux fbcon  
+* https://www.stmcu.org.cn/module/forum/forum.php?mod=viewthread&tid=624411&highlight=STM32F429%2BDis  
+console=ttySTM0,115200 root=/dev/ram rdinit=/linuxrc loglevel=8 console=/dev/fb0 fbcon=map:0  
+* https://unix.stackexchange.com/questions/602917/can-we-run-linux-on-nucleo-stm32f429zi-board  
+* https://www.twblogs.net/a/5f03b9dee53eaf40aa87ac31  
+stm32_platform=stm32429-disco mem=7M console=ttyS2,115200n8 consoleblank=0 root=/dev/mtdblock0 rdinit=/sbin/init video=vfb:enable,fbmem:0x90700000,fbsize:0x100000  
+* https://www.mikrocontroller.net/articles/Linux_auf_STM32  
+* https://github.com/jserv/stm32f429-linux-builder  
+* http://github.com/lisongze2016/stm32f429-linux-builder  
+* (no fb actually, but have image) https://github.com/fdu/STM32F429I-disco_Buildroot  
+root=/dev/ram  
