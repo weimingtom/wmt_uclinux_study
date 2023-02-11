@@ -381,7 +381,7 @@ putty串口配置：115200-8-1-none-none, uart0
 j-flash, zlg_boot.hex (连接ISP JP1跳帽, erase chip, 烧录zlg_boot.hex, 断开ISP JP1跳帽)    
 内存布局跳帽选模式1：bank0是flash，bank1是psram。flash起始地址是0x8000_0000。  
 另外有第三个存储器nand flash（起始地址见work_lpc2210_v2里面的原理图），用于烧录demo和uclinux，似乎无法用j-flash查看  
-* 三块板区分：
+* 三块板区分：  
 （1）大盒子，有灰，带书，盒子模糊，tft4267（新版TFT）,SN:060050611122055  
-（2）小盒子，蜂鸣器有问题，无配件，tft6758（旧版TFT）SN:060050506280537  
-（3）绿色盒子，有配件，tft4267（新版TFT）SN:060050611122104  
+（2）小盒子，蜂鸣器有问题，无配件，tft6758（旧版TFT）,SN:060050506280537  
+（3）绿色盒子，有配件，tft4267（新版TFT）,SN:060050611122104  
