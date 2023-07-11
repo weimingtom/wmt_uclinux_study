@@ -386,3 +386,9 @@ j-flash, zlg_boot.hex (连接ISP JP1跳帽, erase chip, 烧录zlg_boot.hex, 断�
 （1）大盒子，有灰，带书，盒子模糊，tft4267（新版TFT）,SN:060050611122055  
 （2）小盒子，蜂鸣器有问题，无配件，tft6758（旧版TFT）,SN:060050506280537  
 （3）绿色盒子，有配件，tft4267（新版TFT）,SN:060050611122104  
+
+## esp32s3原生运行linux6.3（无mmu）（uclinux）  
+* https://www.bilibili.com/video/BV1Dg4y1K7VB  
+* 内核使用https://github.com/jcmvbkbc/linux-xtensa/  
+rootfs使用https://github.com/jcmvbkbc/buildroot/  
+完整安装步骤http://wiki.osll.ru/doku.php/etc:users:jcmvbkbc:linux-xtensa:esp32s3  
