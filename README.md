@@ -395,3 +395,6 @@ j-flash, zlg_boot.hex (连接ISP JP1跳帽, erase chip, 烧录zlg_boot.hex, 断�
 * 内核使用https://github.com/jcmvbkbc/linux-xtensa/  
 rootfs使用https://github.com/jcmvbkbc/buildroot/  
 完整安装步骤http://wiki.osll.ru/doku.php/etc:users:jcmvbkbc:linux-xtensa:esp32s3  
+
+## ARM原理与嵌入式应用--基于LPC2400系列处理器和IAR开发环境  
+* no source and book, only a src zip from csdn  
