@@ -398,3 +398,6 @@ rootfs使用https://github.com/jcmvbkbc/buildroot/
 
 ## ARM原理与嵌入式应用--基于LPC2400系列处理器和IAR开发环境  
 * no source and book, only a src zip from csdn  
+
+## Boot-Linux-ESP32S3-Playground  
+* https://github.com/ESP32DE/Boot-Linux-ESP32S3-Playground  
