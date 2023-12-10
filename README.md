@@ -135,6 +135,8 @@ mem_bank: map=I, type=RW, addr=0x03ff0000, size=0x00010000
 net: type=s3c4510b, hostip=10.0.0.2, ethmod=tuntap
 #dbct:state=on
 ```
+* 4510b_20040408_success.tar.gz
+* s3c4510b_skyeye_run_images.zip  
 
 ## (Built, Tested) main line buildroot  
 * 我用ubuntu 14编译较新版本（2022.02）的buildroot的STM32F429固件，  
