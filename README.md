@@ -407,3 +407,50 @@ rootfs使用https://github.com/jcmvbkbc/buildroot/
 
 ## Boot-Linux-ESP32S3-Playground  
 * https://github.com/ESP32DE/Boot-Linux-ESP32S3-Playground  
+
+## ADS
+```
+我找到以前学嵌入式Linux时的代码资料，好像就是PXA270处理器（ARM架构，很古老），
+例如点灯是通过ADS 1.2的bare-metal代码控制寄存器（写死地址，然后转换成指针）。
+至于怎么控制屏幕，我想可能是跑在Linux上（有相应的Linux内核代码），用网线传到开发板上。
+不过现在这些bootloader+linux+toolchain，自己买一套回来耍大概也不用很贵了，
+当时应该是很难自己搞来用的。也可以用ADS自带的armulator模拟，不过应该不太好用
+
+我查了一下，nxp官网有提供完整的lpc2138例子（类似stm32那样，用不同的文件夹例如GPIO和SPI之类的区分，
+有一个common目录保存寄存器头文件），
+支持keil 3（兼容keil 4）和ARM REALVIEW（可能是ads 2.2），赞。不过mcuxpresso没有提供这个型号，
+可能是这个型号太旧了，它似乎只提供lpc800（M0+）之类的新型号
+
+我找到我以前用过的古老版的ads 1.2，它跟全志f1c那个melis不同，那个用的是ads 2.2版。
+我记得以前读书好像就是用ads 1.2版做嵌入式的实验，古老的ARM编译器 ​​​
+
+以前的ARM书是讲什么？没错，真的是用汇编写bare-metal（感觉现在是以前用过的），
+例如这本《ARM嵌入式应用开发技术白金手册》。不过没什么用，因为boot汇编代码通常是和很旧的硬件相关的，
+估计很难移植。无非就是拿个ADS CodeWarrior，相当于现在的Keil 4。以前的boot汇编文件很短，
+可以只有10行左右，就是配置一下SYSCFG寄存器，然后跳到C代码
+（如果是普通的单片机，估计可以省了SYSCFG初始化）
+
+我之前买了一个ARM7的s3c44b0x开发板，现在想起来觉得水太深，如果想买的话还是要有一些心理准备才行：
+（1）最好有光盘资料，如果有的话最好，这样开发板其实是次要的——当然skyeye也可能会跑不动（我现在就是这样）
+（2）如果没有JTAG工具，可能会有些亏，因为JTAG烧录比较认s3c44b0x和外部flash的型号（没有内部flash），
+所以很可能会导致没办法写入或者读取flash，和其他JTAG烧录器不兼容，也就是说如果u-boot坏了，开发板基本上就没救了
+（3）基本上都是用ADS和SDT开发，也就是xp专用（其实JTAG烧录也差不多）
+
+网上有篇文章《使用j-link烧写LPC2210》，我试过好像真的可以读出来整片的flash（片外flash是2M），
+我有时间试试可不可以写入程序，网上有说可以用这种方法写入一些简单的程序执行（不过需要预先用ADS1.2编译），
+如果可行的话我可以不用并口烧写程序 ​​​
+
+其实ADS1.2很好玩的，除了似乎只能支持xp，因为它自带有一个软件模拟器，就是说即便你没有开发板，
+也可以模拟运行和单步调试，只不过用法和项目设置跟后来的Keil 4，Keil 5这些有区别（可能更类似于iar），
+例如生成intel hex文件需要下拉选编译后动作，否则设置好了它也不会输出hex文件，
+然后我愣住了很久才反应过来
+
+ads_1.2.iso
+codewarrior_ads
+ADS1.2.zip
+ads1.2.txt, doc.rar/ADS开发ARM之44B0篇.rar    
+ads1.2.rar
+ADS1.2_from_ARM 44BOX_iso
+ads2.2_melis, RVDS_2_2.iso, [ARM集成开发工具].ARM.RealView.Developer.Suite.v2.2-ZWTiSO.bin, eStudio.rar, realview_rvds  
+ADS集成开发环境及EasyJTAG仿真器应用.pdf  
+```
